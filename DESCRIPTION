@@ -5,9 +5,9 @@ Authors@R: c(
     person("Gerry", "Nellestijn", , "gerry@streamkeepers.bc.ca", c("aut", "dtc")),
     person("Robyn", "Irvine", , "robyn@poissonconsulting.ca", c("aut", "dtc")),
     person("Joe", "Thorley", , "joe@poissonconsulting.ca", c("aut", "cre"), comment = c(ORCID = "0000-0002-7683-4592")),
-    person("Tanya", "Tran", role = "dtc")
+    person("Tanya", "Tranxx", role = "dtc")
   )
-Description: What the package does (one paragraph).
+Description: xx.
 License: CC0
 Depends: R (>= 3.3)
 Suggests: 
