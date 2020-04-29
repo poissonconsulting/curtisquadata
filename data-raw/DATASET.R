@@ -86,4 +86,8 @@ efsite %<>%
          DominantSubstrate = fct_recode(DominantSubstrate, Boulder = "B", Cobble = "C")) %>%
   select(EFSite, Creek, SiteLength, Elevation, DominantSubstrate, geometry)
 
-usethis::use_data(efsite, overwrite = TRUE)
+efspecies %<>%
+  mutate(Species = factor(Species),
+          CommonName = factor(CommonName))
+
+usethis::use_data(efspecies, overwrite = TRUE)

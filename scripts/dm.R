@@ -17,6 +17,7 @@ dm <-
     analytevalue,
     benthicsample,
     benthiccount,
+    efspecies,
     efsite
   )
 
@@ -29,6 +30,7 @@ dm %<>%
   dm_add_pk(analytevalue, c(LabID, Analyte)) %>%
   dm_add_pk(benthicsample, c(BioSite, DateBenthicSample)) %>%
   dm_add_pk(benthiccount, c(BioSite, DateBenthicSample, Order, Family)) %>%
+  dm_add_pk(efspecies, Species) %>%
   dm_add_pk(efsite, EFSite) %>%
   dm_add_fk(biosite, c(Creek), creek) %>%
   dm_add_fk(analytesample, c(BioSite), biosite) %>%
