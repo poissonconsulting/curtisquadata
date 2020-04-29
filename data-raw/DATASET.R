@@ -30,3 +30,11 @@ taxon %<>%
          Family = factor(Family, unique(Family)))
 
 usethis::use_data(taxon, overwrite = TRUE)
+
+periphyton %<>%
+  mutate(BioSite = factor(BioSite, levels = levels(biosite$BioSite)),
+         Series = as.integer(Series),
+         Chla = as.double(Chla))
+
+usethis::use_data(periphyton, overwrite = TRUE)
+
