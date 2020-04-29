@@ -19,7 +19,8 @@ dm <-
     benthiccount,
     efspecies,
     efsite,
-    efvisit
+    efvisit,
+    effish
   )
 
 dm %<>%
@@ -34,6 +35,7 @@ dm %<>%
   dm_add_pk(efspecies, Species) %>%
   dm_add_pk(efsite, EFSite) %>%
   dm_add_pk(efvisit, c(EFSite, DateEFVisit)) %>%
+  dm_add_pk(effish, c(EFSite, DateEFVisit, EFPass, FishNumber)) %>%
   dm_add_fk(biosite, Creek, creek) %>%
   dm_add_fk(analytesample, BioSite, biosite) %>%
   dm_add_fk(analytevalue, LabID, analytesample) %>%
@@ -42,6 +44,8 @@ dm %<>%
   dm_add_fk(benthiccount, c(BioSite, DateBenthicSample), benthicsample) %>%
   dm_add_fk(benthiccount, c(Order, Family), taxon) %>%
   dm_add_fk(efsite, Creek, creek) %>%
-  dm_add_fk(efvisit, EFSite, efsite)
+  dm_add_fk(efvisit, EFSite, efsite) %>%
+  dm_add_fk(effish, c(EFSite, DateEFVisit), efvisit) %>%
+  dm_add_fk(effish, Species, efspecies)
 
 dm %>% dm_draw()

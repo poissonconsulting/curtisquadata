@@ -96,6 +96,14 @@ efvisit %<>%
   select(EFSite, DateEFVisit = DateTimeEFVisitStart,
          Conductivity, EFSecPass1, EFSecPass2, EFSecPass3) %>%
   mutate(EFSite = factor(EFSite, levels = levels(efsite$EFSite)),
-         DateEFVisit = as.Date(DateEFVisit))
+         DateEFVisit = dttr2::dtt_date(DateEFVisit))
 
-usethis::use_data(efvisit, overwrite = TRUE)
+effish %<>%
+  rename(DateEFVisit = DateTimeEFVisitStart) %>%
+  mutate(EFSite = factor(EFSite, levels = levels(efsite$EFSite)),
+         Species = factor(Species, levels = levels(efspecies$Species)),
+         DateEFVisit = dttr2::dtt_date(DateEFVisit),
+         BodyWeight = as.double(BodyWeight)) %>%
+  select(EFSite, DateEFVisit, EFPass, FishNumber, Species, ForkLength, BodyWeight)
+
+usethis::use_data(effish, overwrite = TRUE)
