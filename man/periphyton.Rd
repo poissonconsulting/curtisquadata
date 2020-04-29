@@ -8,9 +8,9 @@
 A tibble with the columns:
 \describe{
 \item{BioSite}{Site name}
+\item{DatePeriphyton}{Sample date}
 \item{Series}{Series number}
 \item{SampleID}{Unique sample identifier}
-\item{DatePeriphyton}{Sample date}
 \item{Chla}{Chlorophyll-A concentration}
 }
 }

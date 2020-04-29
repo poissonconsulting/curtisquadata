@@ -38,7 +38,8 @@ usethis::use_data(taxon, overwrite = TRUE)
 periphyton %<>%
   mutate(BioSite = factor(BioSite, levels = levels(biosite$BioSite)),
          Series = as.integer(Series),
-         Chla = as.double(Chla))
+         Chla = as.double(Chla)) %>%
+  select(BioSite, DatePeriphyton, Series, SampleID, Chla)
 
 usethis::use_data(periphyton, overwrite = TRUE)
 
@@ -107,3 +108,5 @@ effish %<>%
   select(EFSite, DateEFVisit, EFPass, FishNumber, Species, ForkLength, BodyWeight)
 
 usethis::use_data(effish, overwrite = TRUE)
+
+

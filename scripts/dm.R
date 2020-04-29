@@ -17,6 +17,7 @@ dm <-
     analytevalue,
     benthicsample,
     benthiccount,
+    periphyton,
     efspecies,
     efsite,
     efvisit,
@@ -32,6 +33,7 @@ dm %<>%
   dm_add_pk(analytevalue, c(LabID, Analyte)) %>%
   dm_add_pk(benthicsample, c(BioSite, DateBenthicSample)) %>%
   dm_add_pk(benthiccount, c(BioSite, DateBenthicSample, Order, Family)) %>%
+  dm_add_pk(periphyton, c(BioSite, DatePeriphyton, Series)) %>%
   dm_add_pk(efspecies, Species) %>%
   dm_add_pk(efsite, EFSite) %>%
   dm_add_pk(efvisit, c(EFSite, DateEFVisit)) %>%
@@ -43,6 +45,7 @@ dm %<>%
   dm_add_fk(benthicsample, BioSite, biosite) %>%
   dm_add_fk(benthiccount, c(BioSite, DateBenthicSample), benthicsample) %>%
   dm_add_fk(benthiccount, c(Order, Family), taxon) %>%
+  dm_add_fk(periphyton, BioSite, biosite) %>%
   dm_add_fk(efsite, Creek, creek) %>%
   dm_add_fk(efvisit, EFSite, efsite) %>%
   dm_add_fk(effish, c(EFSite, DateEFVisit), efvisit) %>%
