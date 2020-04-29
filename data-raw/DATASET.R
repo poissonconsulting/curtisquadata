@@ -58,3 +58,15 @@ benthicsample %<>%
          Subsampled = as.double(Subsampled) / 100)
 
 usethis::use_data(benthicsample, overwrite = TRUE)
+
+benthiccount <- benthicdata
+rm(benthicdata)
+
+benthiccount %<>%
+  rename(Order = Taxon) %>%
+  mutate(BioSite = factor(BioSite, levels = levels(biosite$BioSite)),
+         Order = factor(Order, levels = levels(taxon$Order)),
+         Family = factor(Family, levels = levels(taxon$Family))) %>%
+  select(BioSite, DateBenthicSample, Order, Family, Count)
+
+usethis::use_data(benthiccount, overwrite = TRUE)
