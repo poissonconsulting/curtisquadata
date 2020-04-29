@@ -38,13 +38,18 @@ periphyton %<>%
 
 usethis::use_data(periphyton, overwrite = TRUE)
 
-analytevisit <- chemvisit
+analytesample <- chemvisit
 rm(chemvisit)
 
-analytevisit %<>%
+analytesample %<>%
   tibble::as_tibble() %>%
   mutate(BioSite = factor(BioSite, levels = levels(biosite$BioSite))) %>%
   select(-Lab) %>%
-  rename(DateAnalyteVisit = DateChemVisit)
+  rename(DateAnalyteSample = DateChemVisit)
 
-usethis::use_data(analytevisit, overwrite = TRUE)
+usethis::use_data(analytesample, overwrite = TRUE)
+
+analytevalue <- chemsample
+rm(chemsample)
+
+usethis::use_data(analytevalue, overwrite = TRUE)

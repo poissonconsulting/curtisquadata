@@ -1,4 +1,4 @@
-#' Analyte Visit Data
+#' Analyte Value Data
 #'
 #' A tibble of the sites, dates and lab ids for visit to take water samples.
 #'
@@ -6,6 +6,6 @@
 #' \describe{
 #'   \item{LabID}{Unique lab identifier for sample.}
 #'   \item{Biosite}{Site name.}
-#'   \item{DateAnalyteVisit}{Visit date.}
+#'   \item{DateAnalyteSample}{Sample date.}
 #' }
-"analytevisit"
+"analytesample"
