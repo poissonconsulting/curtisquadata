@@ -1,11 +1,10 @@
 test_that("check_data", {
   expect_null(chk::check_data(
-    biosite,
+    creek,
     values = list(
-      BioSite = factor(""),
       Creek = factor("")),
     order = TRUE,
-    nrow = 6,
-    key = c("BioSite")
+    nrow = 2,
+    key = c("Creek")
   ))
 })

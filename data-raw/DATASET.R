@@ -9,6 +9,10 @@ poissqlite::ps_load_tables(conn = conn, rename = stringr::str_to_lower)
 
 poissqlite::ps_disconnect_sqlite(conn)
 
+creek <- tibble(Creek = factor(c("Curtis", "Qua")))
+
+usethis::use_data(creek, overwrite = TRUE)
+
 analyte %<>%
   select(-GeneralMethod)
 
@@ -19,7 +23,7 @@ biosite %<>%
   rename(Creek = Waterbody) %>%
   mutate(BioSite = factor(BioSite),
          Creek = str_replace(Creek, " Creek", ""),
-         Creek = factor(Creek, levels = unique(Creek)))
+         Creek = factor(Creek, levels = creek$Creek))
 
 usethis::use_data(biosite, overwrite = TRUE)
 
@@ -70,3 +74,16 @@ benthiccount %<>%
   select(BioSite, DateBenthicSample, Order, Family, Count)
 
 usethis::use_data(benthiccount, overwrite = TRUE)
+
+efsite %<>%
+  rename(geometry = Upstream) %>%
+  tibble::as_tibble() %>%
+  rename(Creek = Waterbody,
+         DominantSubstrate = DomSub) %>%
+  mutate(EFSite = factor(EFSite),
+         Creek = str_replace(as.character(Creek), " Creek", ""),
+         Creek = factor(Creek, levels = levels(creek$Creek)),
+         DominantSubstrate = fct_recode(DominantSubstrate, Boulder = "B", Cobble = "C")) %>%
+  select(EFSite, Creek, SiteLength, Elevation, DominantSubstrate, geometry)
+
+usethis::use_data(efsite, overwrite = TRUE)
