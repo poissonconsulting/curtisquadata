@@ -88,6 +88,14 @@ efsite %<>%
 
 efspecies %<>%
   mutate(Species = factor(Species),
-          CommonName = factor(CommonName))
+         CommonName = factor(CommonName))
 
 usethis::use_data(efspecies, overwrite = TRUE)
+
+efvisit %<>%
+  select(EFSite, DateEFVisit = DateTimeEFVisitStart,
+         Conductivity, EFSecPass1, EFSecPass2, EFSecPass3) %>%
+  mutate(EFSite = factor(EFSite, levels = levels(efsite$EFSite)),
+         DateEFVisit = as.Date(DateEFVisit))
+
+usethis::use_data(efvisit, overwrite = TRUE)
