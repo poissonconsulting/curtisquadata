@@ -4,8 +4,7 @@ test_that("check_data", {
     values = list(
       Analyte = "",
       Units = "",
-      MRL = c(0, 100),
-      GeneralMethod = ""),
+      MRL = c(0, 100)),
     exclusive = TRUE,
     order = TRUE,
     nrow = c(10, 100),

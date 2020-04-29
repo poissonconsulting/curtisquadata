@@ -7,6 +7,5 @@
 #'   \item{Analyte}{Name of the analyte.}
 #'   \item{Units}{Units of the analyte.}
 #'   \item{MRL}{Minimum reporting level.}
-#'   \item{GeneralMethod}{General method.}
 #' }
 "analyte"
