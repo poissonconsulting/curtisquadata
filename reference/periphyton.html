@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • curtisquadata</title>
+<title>Periphyton Data — periphyton • curtisquadata</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Periphyton Data — periphyton" />
+<meta property="og:description" content="A tibble of the periphyton time series Chlorophyll-A concentrations." />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -103,60 +104,33 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Periphyton Data</h1>
+    
+    <div class="hidden name"><code>periphyton.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>A tibble of the periphyton time series Chlorophyll-A concentrations.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='no'>periphyton</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="analyte.html">analyte</a></code> </p>
-        </td>
-        <td><p>Analyte Data</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="biosite.html">biosite</a></code> </p>
-        </td>
-        <td><p>Biosite Data</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="periphyton.html">periphyton</a></code> </p>
-        </td>
-        <td><p>Periphyton Data</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="taxon.html">taxon</a></code> </p>
-        </td>
-        <td><p>Taxon Data</p></td>
-      </tr>
-    </tbody>
-    </table>
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>A tibble with the columns:</p><dl>
+<dt>BioSite</dt><dd><p>Site name</p></dd>
+<dt>Series</dt><dd><p>Series number</p></dd>
+<dt>SampleID</dt><dd><p>Unique sample identifier</p></dd>
+<dt>DatePeriphyton</dt><dd><p>Sample date</p></dd>
+<dt>Chla</dt><dd><p>Chlorophyll-A concentration</p></dd>
+
+</dl>
+
+
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
