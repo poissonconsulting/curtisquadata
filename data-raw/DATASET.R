@@ -27,3 +27,11 @@ biosite %<>%
 site <- biosite
 rm(biosite)
 usethis::use_data(site, overwrite = TRUE)
+
+taxon %<>%
+  rename(Order = Taxon) %>%
+  arrange(Order, Family) %>%
+  mutate(Order = factor(Order, unique(Order)),
+         Family = factor(Family, unique(Family)))
+
+usethis::use_data(taxon, overwrite = TRUE)
