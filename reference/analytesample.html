@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • curtisquadata</title>
+<title>Analyte Sample Data — analytesample • curtisquadata</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Analyte Sample Data — analytesample" />
+<meta property="og:description" content="A tibble of the sites, dates and lab ids for visit to take water samples." />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -103,78 +104,31 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Analyte Sample Data</h1>
+    
+    <div class="hidden name"><code>analytesample.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>A tibble of the sites, dates and lab ids for visit to take water samples.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='no'>analytesample</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="analyte.html">analyte</a></code> </p>
-        </td>
-        <td><p>Analyte Data</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="analytesample.html">analytesample</a></code> </p>
-        </td>
-        <td><p>Analyte Sample Data</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="analytevalue.html">analytevalue</a></code> </p>
-        </td>
-        <td><p>Analyte Value Data</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="benthicsample.html">benthicsample</a></code> </p>
-        </td>
-        <td><p>Benthic Sample Data</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="biosite.html">biosite</a></code> </p>
-        </td>
-        <td><p>Biosite Data</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="periphyton.html">periphyton</a></code> </p>
-        </td>
-        <td><p>Periphyton Data</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="taxon.html">taxon</a></code> </p>
-        </td>
-        <td><p>Taxon Data</p></td>
-      </tr>
-    </tbody>
-    </table>
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>A tibble with the columns:</p><dl>
+<dt>LabID</dt><dd><p>Unique lab identifier for sample.</p></dd>
+<dt>Biosite</dt><dd><p>Site name.</p></dd>
+<dt>DateAnalyteSample</dt><dd><p>Sample date.</p></dd>
+
+</dl>
+
+
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
