@@ -5,13 +5,16 @@ library(dm)
 
 pkgload::load_all()
 
+rm(list = ls())
+
 dm <-
   dm(
     biosite,
     taxon,
     analyte,
     analytesample,
-    analytevalue
+    analytevalue,
+    benthicsample
   )
 
 dm %<>%
@@ -20,9 +23,10 @@ dm %<>%
   dm_add_pk(analyte, Analyte) %>%
   dm_add_pk(analytesample, c(LabID)) %>%
   dm_add_pk(analytevalue, c(LabID, Analyte)) %>%
+  dm_add_pk(benthicsample, c(BioSite, DateBenthicSample)) %>%
   dm_add_fk(analytesample, c(BioSite), biosite) %>%
   dm_add_fk(analytevalue, c(LabID), analytesample) %>%
-  dm_add_fk(analytevalue, c(Analyte), analyte)
-
+  dm_add_fk(analytevalue, c(Analyte), analyte) %>%
+  dm_add_fk(benthicsample, c(BioSite), biosite)
 
 dm %>% dm_draw()

@@ -42,7 +42,6 @@ analytesample <- chemvisit
 rm(chemvisit)
 
 analytesample %<>%
-  tibble::as_tibble() %>%
   mutate(BioSite = factor(BioSite, levels = levels(biosite$BioSite))) %>%
   select(-Lab) %>%
   rename(DateAnalyteSample = DateChemVisit)
@@ -53,3 +52,9 @@ analytevalue <- chemsample
 rm(chemsample)
 
 usethis::use_data(analytevalue, overwrite = TRUE)
+
+benthicsample %<>%
+  mutate(BioSite = factor(BioSite, levels = levels(biosite$BioSite)),
+         Subsampled = as.double(Subsampled) / 100)
+
+usethis::use_data(benthicsample, overwrite = TRUE)

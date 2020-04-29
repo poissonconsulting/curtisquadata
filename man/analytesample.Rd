@@ -3,7 +3,7 @@
 \docType{data}
 \name{analytesample}
 \alias{analytesample}
-\title{Analyte Value Data}
+\title{Analyte Sample Data}
 \format{
 A tibble with the columns:
 \describe{

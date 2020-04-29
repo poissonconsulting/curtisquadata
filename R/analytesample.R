@@ -1,4 +1,4 @@
-#' Analyte Value Data
+#' Analyte Sample Data
 #'
 #' A tibble of the sites, dates and lab ids for visit to take water samples.
 #'
