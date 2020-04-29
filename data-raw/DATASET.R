@@ -110,3 +110,11 @@ effish %<>%
 usethis::use_data(effish, overwrite = TRUE)
 
 
+tempsite %<>%
+  tibble::as_tibble() %>%
+  rename(Creek = WaterBody) %>%
+  mutate(TempSite = factor(TempSite),
+         Creek = str_replace(Creek, " Creek", ""),
+         Creek = factor(Creek, levels = creek$Creek))
+
+usethis::use_data(tempsite, overwrite = TRUE)
