@@ -118,3 +118,10 @@ tempsite %<>%
          Creek = factor(Creek, levels = creek$Creek))
 
 usethis::use_data(tempsite, overwrite = TRUE)
+
+temperature %<>%
+  select(TempSite, DateTimeTemperature, Temperature) %>%
+  mutate(TempSite = factor(TempSite, levels(tempsite$TempSite)),
+         Temperature = as.double(Temperature))
+
+usethis::use_data(temperature, overwrite = TRUE)

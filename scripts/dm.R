@@ -22,7 +22,8 @@ dm <-
     efsite,
     efvisit,
     effish,
-    tempsite
+    tempsite,
+    temperature
   )
 
 dm %<>%
@@ -40,6 +41,7 @@ dm %<>%
   dm_add_pk(efvisit, c(EFSite, DateEFVisit)) %>%
   dm_add_pk(effish, c(EFSite, DateEFVisit, EFPass, FishNumber)) %>%
   dm_add_pk(tempsite, TempSite) %>%
+  dm_add_pk(temperature, c(TempSite, DateTimeTemperature)) %>%
   dm_add_fk(biosite, Creek, creek) %>%
   dm_add_fk(analytesample, BioSite, biosite) %>%
   dm_add_fk(analytevalue, LabID, analytesample) %>%
@@ -52,6 +54,11 @@ dm %<>%
   dm_add_fk(efvisit, EFSite, efsite) %>%
   dm_add_fk(effish, c(EFSite, DateEFVisit), efvisit) %>%
   dm_add_fk(effish, Species, efspecies) %>%
-  dm_add_fk(tempsite, Creek, creek)
+  dm_add_fk(tempsite, Creek, creek) %>%
+  dm_add_fk(temperature, c(TempSite), tempsite)
 
 dm %>% dm_draw()
+
+dm %>% dm_flatten_to_tbl(effish)
+dm %>% dm_flatten_to_tbl(benthiccount)
+dm %>% dm_flatten_to_tbl(analytevalue)
