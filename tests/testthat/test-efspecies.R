@@ -3,7 +3,8 @@ test_that("check_data", {
     efspecies,
     values = list(
       Species = factor(""),
-      CommonName = factor("")),
+      CommonName = factor("")
+    ),
     exclusive = TRUE,
     order = TRUE,
     nrow = 2,

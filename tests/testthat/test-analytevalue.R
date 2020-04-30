@@ -4,7 +4,8 @@ test_that("check_data", {
     values = list(
       LabID = "",
       Analyte = "",
-      Value = c(0, 100)),
+      Value = c(0, 100)
+    ),
     order = TRUE,
     exclusive = TRUE,
     nrow = TRUE,

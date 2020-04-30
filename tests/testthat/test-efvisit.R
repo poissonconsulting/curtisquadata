@@ -6,7 +6,8 @@ test_that("check_data", {
       DateEFVisit = as.Date(c("2015-01-01", "2018-12-31")),
       EFSecPass1 = c(100L, 1000L),
       EFSecPass2 = c(0L, 500L),
-      EFSecPass3 = c(0L, 500L)),
+      EFSecPass3 = c(0L, 500L)
+    ),
     order = TRUE,
     nrow = TRUE,
     key = c("EFSite", "DateEFVisit")

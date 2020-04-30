@@ -8,7 +8,8 @@ test_that("check_data", {
       FishNumber = c(1L, 30L),
       Species = factor(""),
       ForkLength = c(20L, 250L),
-      BodyWeight = c(0.1, 200)),
+      BodyWeight = c(0.1, 200)
+    ),
     exclusive = TRUE,
     order = TRUE,
     nrow = TRUE,

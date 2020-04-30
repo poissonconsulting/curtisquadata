@@ -6,7 +6,8 @@ test_that("check_data", {
       Creek = factor(""),
       SiteLength = c(10, 20),
       Elevation = c(1000, 1300),
-      DominantSubstrate = factor("")),
+      DominantSubstrate = factor("")
+    ),
     order = TRUE,
     nrow = 8,
     key = c("EFSite")

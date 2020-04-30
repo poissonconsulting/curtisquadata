@@ -6,7 +6,8 @@ test_that("check_data", {
       DateBenthicSample = as.Date(c("2015-01-01", "2018-12-31")),
       Order = factor(""),
       Family = factor(c("", NA)),
-      Count = c(0L, 300L)),
+      Count = c(0L, 300L)
+    ),
     order = TRUE,
     exclusive = TRUE,
     nrow = TRUE,

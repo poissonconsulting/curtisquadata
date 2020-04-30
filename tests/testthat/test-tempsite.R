@@ -3,7 +3,8 @@ test_that("check_data", {
     tempsite,
     values = list(
       TempSite = factor(""),
-      Creek = factor("")),
+      Creek = factor("")
+    ),
     order = TRUE,
     nrow = 4,
     key = c("TempSite")

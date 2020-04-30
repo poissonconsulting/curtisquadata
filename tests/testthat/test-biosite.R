@@ -3,7 +3,8 @@ test_that("check_data", {
     biosite,
     values = list(
       BioSite = factor(""),
-      Creek = factor("")),
+      Creek = factor("")
+    ),
     order = TRUE,
     nrow = 6,
     key = c("BioSite")

@@ -80,4 +80,4 @@ By contributing to this project, you agree to abide by its terms.
 The study was primarily funded by the Fish and Wildlife Compensation Program 
 and partially funded by the Salmo Watershed Streamkeepers Society.
 Lynn Westcott of Westcott Environmental Services identified and counted the benthic macroinvertebrates.
-CARO Analytic analysed the water and periphyton samples.
+CARO Analytic analysed the water and periphyton samples

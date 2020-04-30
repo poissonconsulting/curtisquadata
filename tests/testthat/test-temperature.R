@@ -4,7 +4,8 @@ test_that("check_data", {
     values = list(
       TempSite = factor(""),
       DateTimeTemperature = Sys.time(),
-      Temperature = c(-0.004, 16)),
+      Temperature = c(-0.004, 16)
+    ),
     exclusive = TRUE,
     order = TRUE,
     nrow = TRUE,

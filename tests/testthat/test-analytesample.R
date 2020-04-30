@@ -4,7 +4,8 @@ test_that("check_data", {
     values = list(
       LabID = "",
       BioSite = factor(""),
-      DateAnalyteSample = as.Date(c("2015-01-01", "2018-12-31"))),
+      DateAnalyteSample = as.Date(c("2015-01-01", "2018-12-31"))
+    ),
     order = TRUE,
     exclusive = TRUE,
     nrow = TRUE,

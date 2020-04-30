@@ -3,7 +3,8 @@ test_that("check_data", {
     taxon,
     values = list(
       Order = factor(""),
-      Family = factor(c("", NA))),
+      Family = factor(c("", NA))
+    ),
     order = TRUE,
     exclusive = TRUE,
     nrow = TRUE,

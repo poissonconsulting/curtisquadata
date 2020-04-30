@@ -4,7 +4,8 @@ test_that("check_data", {
     values = list(
       BioSite = factor(""),
       DateBenthicSample = as.Date(c("2015-01-01", "2018-12-31")),
-      Subsampled = c(0, 1)),
+      Subsampled = c(0, 1)
+    ),
     order = TRUE,
     exclusive = TRUE,
     nrow = TRUE,
