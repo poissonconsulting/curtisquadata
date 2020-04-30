@@ -4,10 +4,18 @@ Version: 0.0.0.9001
 Authors@R: c(
     person("Gerry", "Nellestijn", , "gerry@streamkeepers.bc.ca", c("aut", "dtc")),
     person("Robyn", "Irvine", , "robyn@poissonconsulting.ca", c("aut", "dtc")),
-    person("Joe", "Thorley", , "joe@poissonconsulting.ca", c("aut", "cre"), comment = c(ORCID = "0000-0002-7683-4592")),
-    person("Tanya", "Tranxx", role = "dtc")
-  )
-Description: xx.
+    person("Tanya", "Tran", role = c("aut", "dtc")),
+    person("Joe", "Thorley", , "joe@poissonconsulting.ca", c("aut", "cre", "dtm"), comment = c(ORCID = "0000-0002-7683-4592")),
+    person("Lynn", "Westcott", role = "dtc"),
+    person("CARO Analytic", role = "dtc"),
+    person("Sebastian", "Dalgarno", , "seb@poissonconsulting.ca", "dtm", comment = c(ORCID = "0000-0002-3658-4517")),
+    person("Fish and Wildlife Compensation Program", role = "fnd"),
+    person("Salmo Watershed Streamkeepers Society", role = "fnd"))
+Description: Fifteen relational tibbles from the Curtis and Qua Creeks 
+    Productivity study. The study which ran from 2015 to 2017 collected data on 
+    the water quality and temperature, periphyton, benthic invertebrates and 
+    fish populations of Curtis and Qua Creeks in 
+    the Salmo Watershed, British Columbia.
 License: CC0
 Depends: R (>= 3.3)
 Suggests: 
