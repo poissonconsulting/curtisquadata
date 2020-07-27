@@ -72,13 +72,16 @@
 <!-- badges: start -->
 
 <p><code>curtisquadata</code> is an R package of 15 relational tibbles from the Curtis and Qua Creeks Productivity study.</p>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/ls.html">ls</a></span>(<span class="st">"package:curtisquadata"</span>) <span class="co"># the tibbles</span>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/ls.html">ls</a></span>(<span class="st">"package:curtisquadata"</span>) <span class="co"># the tibbles</span>
 <span class="co">#&gt;  [1] "analyte"       "analytesample" "analytevalue"  "benthiccount" </span>
 <span class="co">#&gt;  [5] "benthicsample" "biosite"       "creek"         "effish"       </span>
 <span class="co">#&gt;  [9] "efsite"        "efspecies"     "efvisit"       "periphyton"   </span>
-<span class="co">#&gt; [13] "taxon"         "temperature"   "tempsite"</span></pre></div>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">tibble</span>) <span class="co"># for prettier printing</span>
-<span class="no">efvisit</span>
+<span class="co">#&gt; [13] "taxon"         "temperature"   "tempsite"</span>
+</pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://tibble.tidyverse.org">tibble</a></span>) <span class="co"># for prettier printing</span>
+<span class="kw">efvisit</span>
 <span class="co">#&gt; # A tibble: 24 x 6</span>
 <span class="co">#&gt;    EFSite DateEFVisit Conductivity EFSecPass1 EFSecPass2 EFSecPass3</span>
 <span class="co">#&gt;    &lt;fct&gt;  &lt;date&gt;      &lt;units&gt;           &lt;int&gt;      &lt;int&gt;      &lt;int&gt;</span>
@@ -92,8 +95,10 @@
 <span class="co">#&gt;  8 QUA4   2015-08-10  44                  333        219        199</span>
 <span class="co">#&gt;  9 QUA1   2016-08-02  56                  271        250        189</span>
 <span class="co">#&gt; 10 QUA2   2016-08-02  56                  355        285        161</span>
-<span class="co">#&gt; # … with 14 more rows</span></pre></div>
-<div class="sourceCode" id="cb3"><pre class="r"><span class="no">effish</span>
+<span class="co">#&gt; # … with 14 more rows</span>
+</pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="kw">effish</span>
 <span class="co">#&gt; # A tibble: 277 x 7</span>
 <span class="co">#&gt;    EFSite DateEFVisit EFPass FishNumber Species ForkLength BodyWeight</span>
 <span class="co">#&gt;    &lt;fct&gt;  &lt;date&gt;       &lt;int&gt;      &lt;int&gt; &lt;fct&gt;        &lt;int&gt;      &lt;dbl&gt;</span>
@@ -107,14 +112,17 @@
 <span class="co">#&gt;  8 QUA2   2015-08-11       1          8 RB             122       22.1</span>
 <span class="co">#&gt;  9 QUA2   2015-08-11       1          9 RB             123       21.2</span>
 <span class="co">#&gt; 10 QUA2   2015-08-11       1         10 RB             125       23.6</span>
-<span class="co">#&gt; # … with 267 more rows</span></pre></div>
+<span class="co">#&gt; # … with 267 more rows</span>
+</pre></div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <!-- To install the latest release from [CRAN](https://cran.r-project.org) -->
 <p>To install the developmental version from <a href="https://github.com/poissonconsulting/curtisquadata">GitHub</a></p>
-<div class="sourceCode" id="cb4"><pre class="r"><span class="co"># install.packages("remotes")</span>
-<span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"poissonconsulting/curtisquadata"</span>)</pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="co"># install.packages("remotes")</span>
+<span class="kw">remotes</span>::<span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"poissonconsulting/curtisquadata"</span>)
+</pre></div>
 </div>
 <div id="information" class="section level2">
 <h2 class="hasAnchor">
@@ -153,6 +161,7 @@
 <div class="community">
 <h2>Community</h2>
 <ul class="list-unstyled">
+<li><a href="CONTRIBUTING.html">Contributing guide</a></li>
 <li><a href="CODE_OF_CONDUCT.html">Code of conduct</a></li>
 </ul>
 </div>
