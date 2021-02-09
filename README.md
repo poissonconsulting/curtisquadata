@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![Lifecycle:
-stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![R build
 status](https://github.com/poissonconsulting/curtisquadata/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/curtisquadata/actions)
 [![Codecov test
@@ -30,7 +30,6 @@ ls("package:curtisquadata") # the tibbles
 
 ``` r
 library(tibble) # for prettier printing
-#> Warning: package 'tibble' was built under R version 3.6.3
 efvisit
 #> # A tibble: 24 x 6
 #>    EFSite DateEFVisit Conductivity EFSecPass1 EFSecPass2 EFSecPass3
@@ -45,7 +44,7 @@ efvisit
 #>  8 QUA4   2015-08-10  44                  333        219        199
 #>  9 QUA1   2016-08-02  56                  271        250        189
 #> 10 QUA2   2016-08-02  56                  355        285        161
-#> # ... with 14 more rows
+#> # … with 14 more rows
 ```
 
 ``` r
@@ -63,7 +62,7 @@ effish
 #>  8 QUA2   2015-08-11       1          8 RB             122       22.1
 #>  9 QUA2   2015-08-11       1          9 RB             123       21.2
 #> 10 QUA2   2015-08-11       1         10 RB             125       23.6
-#> # ... with 267 more rows
+#> # … with 267 more rows
 ```
 
 ## Installation
