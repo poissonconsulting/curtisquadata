@@ -3,7 +3,8 @@ Title: Curtis and Qua Creeks Productivity Study Data
 Version: 0.0.1
 Authors@R: c(
     person("Gerry", "Nellestijn", , "gerry@streamkeepers.bc.ca", c("aut", "dtc")),
-    person("Robyn", "Irvine", , "robyn@poissonconsulting.ca", c("aut", "dtc")),
+    person("Robyn", "Irvine", , "robyn@poissonconsulting.ca", c("aut", "dtc"),
+           comment = c(ORCID = "0000-0002-6008-1864")),
     person("Tanya Chi", "Tran", role = c("aut", "dtc")),
     person("Joe", "Thorley", , "joe@poissonconsulting.ca", c("aut", "cre", "dtm"), comment = c(ORCID = "0000-0002-7683-4592")),
     person("Lynn", "Westcott", role = "dtc"),
