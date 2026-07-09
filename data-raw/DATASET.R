@@ -3,7 +3,9 @@ library(magrittr)
 
 rm(list = ls())
 
-conn <- poissqlite::ps_connect_sqlite("~/Poisson/Databases/curtis-qua-prod.sqlite")
+conn <- poissqlite::ps_connect_sqlite(
+  "~/Poisson/Databases/curtis-qua-prod.sqlite"
+)
 
 poissqlite::ps_load_tables(conn = conn, rename = stringr::str_to_lower)
 
@@ -97,7 +99,11 @@ efsite %<>%
     EFSite = factor(EFSite),
     Creek = str_replace(as.character(Creek), " Creek", ""),
     Creek = factor(Creek, levels = levels(creek$Creek)),
-    DominantSubstrate = fct_recode(DominantSubstrate, Boulder = "B", Cobble = "C")
+    DominantSubstrate = fct_recode(
+      DominantSubstrate,
+      Boulder = "B",
+      Cobble = "C"
+    )
   ) %>%
   select(EFSite, Creek, SiteLength, Elevation, DominantSubstrate, geometry)
 
@@ -110,9 +116,13 @@ efspecies %<>%
 usethis::use_data(efspecies, overwrite = TRUE)
 
 efvisit %<>%
-  select(EFSite,
+  select(
+    EFSite,
     DateEFVisit = DateTimeEFVisitStart,
-    Conductivity, EFSecPass1, EFSecPass2, EFSecPass3
+    Conductivity,
+    EFSecPass1,
+    EFSecPass2,
+    EFSecPass3
   ) %>%
   mutate(
     EFSite = factor(EFSite, levels = levels(efsite$EFSite)),
@@ -127,7 +137,15 @@ effish %<>%
     DateEFVisit = dttr2::dtt_date(DateEFVisit),
     BodyWeight = as.double(BodyWeight)
   ) %>%
-  select(EFSite, DateEFVisit, EFPass, FishNumber, Species, ForkLength, BodyWeight)
+  select(
+    EFSite,
+    DateEFVisit,
+    EFPass,
+    FishNumber,
+    Species,
+    ForkLength,
+    BodyWeight
+  )
 
 usethis::use_data(effish, overwrite = TRUE)
 
