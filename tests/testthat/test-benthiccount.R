@@ -13,6 +13,10 @@ test_that("check_data", {
     nrow = TRUE,
     key = c("BioSite", "DateBenthicSample", "Order", "Family")
   ))
-  chk::chk_join(benthiccount, benthicsample, by = c("BioSite", "DateBenthicSample"))
+  chk::chk_join(
+    benthiccount,
+    benthicsample,
+    by = c("BioSite", "DateBenthicSample")
+  )
   chk::chk_join(benthiccount, taxon, by = c("Family", "Order"))
 })
